@@ -1,55 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <!--=============== Favicon ===============-->
     <link
-      rel="shortcut icon"
-      href="./images/favicon-32x32.png"
-      type="image/png"
+            rel="shortcut icon"
+            href="./images/favicon-32x32.png"
+            type="image/png"
     />
     <!--=============== Swiper CSS ===============-->
     <link
-      rel="stylesheet"
-      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+            rel="stylesheet"
+            href="https://unpkg.com/swiper/swiper-bundle.min.css"
     />
     <!--=============== Boxicons ===============-->
     <link
-      href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
-      rel="stylesheet"
+            href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
+            rel="stylesheet"
     />
     <!--=============== Custom StyleSheet ===============-->
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/styles.css"/>
     <title>FDelivery</title>
-  </head>
-  <body>
-    <!--=============== Header ===============-->
-    <header class="header">
-      <!--=============== Home ===============-->
+</head>
+<body>
+<!--=============== Header ===============-->
+<header class="header">
+    <!--=============== Home ===============-->
+    <nav class="navbar">
+        <div class="row d-flex container">
+            <!--=============== logo food ===============-->
+            <a href="index.html" class="logo d-flex">
+                <img src="images/logo.png"/>
+            </a>
 
-      <!--=============== SignIn Form ===============-->
-    </header>
+            <!--=============== nav menu ===============-->
+            <ul class="nav-list d-flex">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#shop">Shop</a></li>
+                <li><a href="#recipes">Recipes</a></li>
+                <li><a href="#contat">Contact</a></li>
+                <div class="col d-flex">
+                    <form>
+                        <input placeholder="Search your item">
+                        <button type="button" class="d-flex">
+                            <i class='bx bx-search'></i>
+                        </button>
+                    </form>
+                </div>
+                <span class="close d-flex"><i class="bx bx-x"></i></span>
+            </ul>
 
-    <!--=============== Services ===============-->
+            <!--=============== form  ===============-->
+            <div class="col d-flex form-cart-signin">
+                <form>
+                    <input placeholder="Search your item">
+                    <button type="button" class="d-flex">
+                        <i class='bx bx-search'></i>
+                    </button>
+                </form>
+                <div class="cart-icon d-flex">
+                    <i class='bx bx-shopping-bag'></i>
+                    <span class="cart-count">0</span>
+                </div>
+                <a class="btn signin">Sing in</a>
+            </div>
 
-    <!--=============== About ===============-->
+            <!-- Hamburger -->
+            <div class="hamburger d-flex">
+                <i class="bx bx-menu"></i>
+            </div>
 
-    <!--=============== Recipes ===============-->
 
-    <!--=============== Testimonials ===============-->
+        </div>
+    </nav>
+    <!--=============== SignIn Form ===============-->
+</header>
 
-    <!--=============== App ===============-->
+<!--=============== Services ===============-->
 
-    <!--=============== Footer ===============-->
+<!--=============== About ===============-->
 
-    <!--=============== Swiper JS ===============-->
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<!--=============== Recipes ===============-->
 
-    <!--=============== Custom JS ===============-->
-    <script src="./js/testimonial.js"></script>
-    <script src="./js/products.js"></script>
-    <script src="./js/main.js"></script>
-  </body>
+<!--=============== Testimonials ===============-->
+
+<!--=============== App ===============-->
+
+<!--=============== Footer ===============-->
+
+<!--=============== Swiper JS ===============-->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<!--=============== Custom JS ===============-->
+<script src="./js/testimonial.js"></script>
+<script src="./js/products.js"></script>
+<script src="./js/main.js"></script>
+</body>
 </html>

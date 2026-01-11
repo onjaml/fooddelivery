@@ -1,0 +1,263 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+:root {
+  --primary-color: #f94a3d;
+  --yellow-color: #ffcf03;
+  --black-color: #212244;
+  --default-color: #69697b;
+  --deep-yellow: #ff9401;
+  --yellow-color-1: #ffe507;
+  --red-color-1: #e83b2e;
+  --red-color-2: #ee3e32;
+  --light-red-color: #fdecec;
+  --grey-color: #eaeaea;
+  --grey-color-1: #f8f8f8;
+  --white-color: #fff;
+  --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--default-color);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--black-color);
+  line-height: 1.2;
+  font-weight: 500;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style-type: none;
+}
+
+section {
+  padding: 5rem 0 5rem;
+  overflow: hidden;
+}
+
+p {
+  line-height: 3rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.btn {
+  display: inline-block;
+  cursor: pointer;
+  background-color: var(--primary-color);
+  border-radius: 1rem;
+  padding: 0.7rem 2.5rem;
+  color: var(--white-color);
+}
+
+.container {
+  max-width: 120rem;
+  padding: 0 3rem;
+  margin: auto;
+}
+
+@media (min-width: 1500px) {
+  .container {
+    max-width: 135rem;
+  }
+}
+/* ========== Header =========== */
+.header {
+  min-height: 100vh;
+  background: linear-gradient(45deg, rgba(249, 74, 61, 0.1) 60%, rgba(255, 229, 7, 0.1));
+}
+
+.navbar {
+  padding: 2em 0;
+}
+.navbar .row {
+  justify-content: space-between;
+}
+.navbar .logo {
+  justify-content: space-between;
+}
+@media screen and (max-width: 800px) {
+  .navbar .logo {
+    width: 15rem;
+  }
+}
+.navbar .nav-list {
+  gap: 0.5rem;
+}
+.navbar .nav-list li {
+  display: inline-block;
+  padding: 1rem 0.5rem 1rem;
+}
+.navbar .nav-list .close {
+  display: none;
+  cursor: pointer;
+}
+.navbar .nav-list.show {
+  left: 0;
+}
+.navbar .nav-list .col {
+  display: none;
+}
+@media (max-width: 800px) {
+  .navbar .nav-list {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    max-width: 35rem;
+    height: 100%;
+    background-color: var(--white-color);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    z-index: 9999;
+    padding: 5rem 2rem;
+    transition: left 300ms linear;
+  }
+  .navbar .nav-list .close {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    font-size: 3rem;
+    cursor: pointer;
+    padding: 0.5rem 0.7rem;
+    display: flex;
+    justify-content: center;
+  }
+  .navbar .nav-list .col {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navbar .nav-list .col form {
+    display: inline-block;
+    width: 100%;
+  }
+}
+.navbar .hamburger {
+  font-size: 2.5rem;
+  background-color: var(--primary-color);
+  border-radius: 0.3rem;
+  color: var(--white-color);
+  padding: 0.5rem 0.7rem;
+  justify-content: center;
+  cursor: pointer;
+  display: none;
+}
+@media screen and (max-width: 800px) {
+  .navbar .hamburger {
+    display: inline-block;
+  }
+}
+.navbar {
+  /* form**/
+}
+@media screen and (max-width: 800px) {
+  .navbar .col {
+    display: none;
+  }
+}
+.navbar .col form {
+  background-color: var(--white-color);
+  border-radius: 0.5rem;
+  box-shadow: var(--box-shadow);
+  border: 1px solid rgba(105, 105, 123, 0.1);
+  padding: 0.5rem 0;
+  margin-right: 1.5rem;
+  width: 25rem;
+  position: relative;
+}
+.navbar .col form input {
+  text-indent: 1rem;
+  font-size: 1.4rem;
+  width: 100%;
+}
+.navbar .col form input::placeholder {
+  color: var(--default-color);
+}
+.navbar .col form button {
+  justify-content: center;
+  padding: 0.5rem;
+  background-color: transparent;
+  border-left: 1px solid rgba(105, 105, 123, 0.1);
+  font-size: 1.7rem;
+  color: var(--default-color);
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
+}
+@media screen and (max-width: 1024px) {
+  .navbar .col form {
+    display: none;
+  }
+}
+.navbar {
+  /*cart icon**/
+}
+.navbar .cart-icon {
+  justify-content: center;
+  color: var(--default-color);
+  position: relative;
+  font-size: 2rem;
+  margin-right: 1.5rem;
+}
+.navbar .cart-icon span {
+  position: absolute;
+  top: -1.3rem;
+  right: -1rem;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  color: var(--white-color);
+  padding: 0.1rem 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.navbar .btn {
+  margin-left: 1rem;
+}
+
+/* ========== Custom Classes =========== */
+.d-flex {
+  display: flex;
+  align-items: center;
+}
+
+/* ========== Home =========== */
+/* ========== Services =========== */
+/* ========== about =========== */
+/* ========== Recipes =========== */
+/* ========== Testimonials =========== */
+/* ========== App =========== */
+/* ========== Footer =========== */
+
+/*# sourceMappingURL=styles.css.map */
